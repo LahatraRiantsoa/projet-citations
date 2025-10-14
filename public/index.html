@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Citation</title>
+</head>
+<body>
+    <h1>Citation generator</h1>
+    <blockquote id="citation"></blockquote>
+    <button id="refresh"> Generer la citation</button>
+    <script>
+        function affichageCitation(){
+            const aleatoireIndx = Math.floor(Math.random()*citations.length);
+            document.getElementById("citation").innerText=citations[aleatoireIndx];
+        }
+        document.getElementById("refresh").addEventListener("click",affichageCitation);
+        window.onload=affichageCitation;
+    </script>
+</body>
+</html>
