@@ -1,8 +1,8 @@
 const citation = [
-  "Le succes est la somme de petits efforts repetes jour apres jour.",
-  "Apprendre sans reflechir est vain. Reflechir sans apprendre est dangereux.",
-  "La simplicite est la sophistication supreme.",
-  "La meilleure façon de prédire l’avenir, c’est de le creer."
+  "Le succès est la somme de petits efforts répétés jour après jour.",
+  "Apprendre sans réfléchir est vain. Réfléchir sans apprendre est dangereux.",
+  "La simplicité est la sophistication suprême.",
+  "La meilleure façon de prédire l’avenir, c’est de le créer."
 ];
 
 function citationAleatoire() {

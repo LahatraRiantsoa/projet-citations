@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Citation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generateur de citation</title>
 </head>
 <body>
-    <h1>Citation generator</h1>
-    <blockquote id="citation"></blockquote>
-    <button id="refresh"> Generer la citation</button>
-    <script>
-        function affichageCitation(){
-            const aleatoireIndx = Math.floor(Math.random()*citation.length);
-            document.getElementById("citation").innerText=citation[aleatoireIndx];
-        }
-        document.getElementById("refresh").addEventListener("click",affichageCitation);
-        window.onload=affichageCitation;
-    </script>
+  <h1>Generateur de citation</h1>
+  <blockquote id="citation"></blockquote>
+  <button id="refresh">Generer la situation</button>
+
+  <script>
+    const citations = [
+      "Le succès est la somme de petits efforts répétés jour après jour.",
+      "Apprendre sans réfléchir est vain. Réfléchir sans apprendre est dangereux.",
+      "La simplicité est la sophistication suprême.",
+      "La meilleure façon de prédire l’avenir, c’est de le créer."
+    ];
+
+    function afficherCitation() {
+      const randomIndex = Math.floor(Math.random() * citations.length);
+      document.getElementById("citation").innerText = citations[randomIndex];
+    }
+
+    document.getElementById("refresh").addEventListener("click", afficherCitation);
+    window.onload = afficherCitation;
+  </script>
 </body>
 </html>
