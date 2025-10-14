@@ -5,3 +5,4 @@ test('La fonction retourne une citation non vide (string)', () => {
   expect(typeof result).toBe('string');
   expect(result.length).toBeGreaterThan(0);
 });
+ 
