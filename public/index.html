@@ -11,8 +11,8 @@
     <button id="refresh"> Generer la citation</button>
     <script>
         function affichageCitation(){
-            const aleatoireIndx = Math.floor(Math.random()*citations.length);
-            document.getElementById("citation").innerText=citations[aleatoireIndx];
+            const aleatoireIndx = Math.floor(Math.random()*citation.length);
+            document.getElementById("citation").innerText=citation[aleatoireIndx];
         }
         document.getElementById("refresh").addEventListener("click",affichageCitation);
         window.onload=affichageCitation;
