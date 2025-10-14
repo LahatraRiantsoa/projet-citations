@@ -1,4 +1,4 @@
-const citations = [
+const citation = [
   "Le succes est la somme de petits efforts repetes jour apres jour.",
   "Apprendre sans reflechir est vain. Reflechir sans apprendre est dangereux.",
   "La simplicite est la sophistication supreme.",
@@ -6,8 +6,8 @@ const citations = [
 ];
 
 function citationAleatoire() {
-  const index = Math.floor(Math.random() * citations.length);
-  return citations[index];
+  const index = Math.floor(Math.random() * citation.length);
+  return citation[index];
 }
 
 module.exports = citationAleatoire;
