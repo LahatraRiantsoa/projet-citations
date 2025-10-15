@@ -9,10 +9,10 @@
 // });
 
 //prendre via api
-const getCitation = require('../src/api');
+const getCitation = require ( '../src/api') ;
 
-test('L\'API retourne une citation valide', async () => {
-  const result = await getCitation();
-  expect(typeof result).toBe('string');
-  expect(result.length).toBeGreaterThan(10);
-});
+ test (' L\' API retourne une citation valide ', async () => {
+ const result = await getCitation () ;
+ expect ( typeof result ). toBe (' string ') ;
+ expect ( result . length ) . toBeGreaterThan (10) ;
+ }) ;
