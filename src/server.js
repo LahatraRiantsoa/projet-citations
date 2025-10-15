@@ -5,7 +5,7 @@ import { getCitation } from './api.js';
 
 const app = express();
 app.use(cors()); // autorise ton front à appeler ton backend
-app.use(express.static('public')); // sert tes fichiers front
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/api/quote', async (req, res) => {
   try {
