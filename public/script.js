@@ -8,14 +8,7 @@
 // window.onload = chargerCitation;
 
 async function chargerCitation() {
-  try {
-    const response = await fetch(
-      'https://api.allorigins.win/raw?url=https://zenquotes.io/api/random'
-    );
-    const data = await response.json();
-    document.getElementById('citation').innerText = `${data[0].q} — ${data[0].a}`;
-  } catch (error) {
-    console.error('Erreur lors du chargement de la citation :', error);
-    document.getElementById('citation').innerText = 'Impossible de charger la citation.';
-  }
+  const response = await fetch('/citation');
+  const data = await response.json();
+  document.getElementById('citation').innerText = `${data[0].q} — ${data[0].a}`;
 }
