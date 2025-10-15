@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start-server": "node src/server.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
     "jest": "^30.2.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "node-fetch": "^2.7.0"
   }
 }
