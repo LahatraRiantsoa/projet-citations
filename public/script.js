@@ -1,7 +1,25 @@
+// async function chargerCitation() {
+//   const res = await fetch('https://zenquotes.io/api/random');
+//   const data = await res.json();
+//   document.getElementById('citation').innerText = `${data[0].q} — ${data[0].a}`;
+// }
+
+// document.getElementById('nouvelle').addEventListener('click', chargerCitation);
+// window.onload = chargerCitation;
+
 async function chargerCitation() {
-  const response = await fetch('https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random');
-  const data = await response.json();
-  document.getElementById('citation').innerText = `${data[0].q} — ${data[0].a}`;
+  try {
+
+    const response = await fetch(
+      'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random'
+    );
+    const data = await response.json();
+
+    document.getElementById('citation').innerText = `${data[0].q} — ${data[0].a}`;
+  } catch (error) {
+    console.error('Erreur lors du chargement de la citation :', error);
+    document.getElementById('citation').innerText = 'Impossible de charger la citation.';
+  }
 }
 
 document.getElementById('nouvelle').addEventListener('click', chargerCitation);
