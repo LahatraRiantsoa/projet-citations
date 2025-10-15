@@ -1,7 +1,18 @@
-const citationAleatoire = require('../src/app');
+//prendre app
 
-test('La fonction retourne une citation non vide (string)', () => {
-  const result = citationAleatoire();
+// const citationAleatoire = require('../src/app');
+
+// test('La fonction retourne une citation non vide (string)', () => {
+//   const result = citationAleatoire();
+//   expect(typeof result).toBe('string');
+//   expect(result.length).toBeGreaterThan(0);
+// });
+
+//prendre via api
+const getCitation = require('../src/api');
+
+test('L\'API retourne une citation valide', async () => {
+  const result = await getCitation();
   expect(typeof result).toBe('string');
-  expect(result.length).toBeGreaterThan(0);
+  expect(result.length).toBeGreaterThan(10);
 });
